@@ -1,6 +1,7 @@
 {
-  "name": "udemy-node",
+  "name": "assingment-2",
   "version": "0.0.1",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -8,7 +9,6 @@
   },
   "author": "Joni Rämö",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^4.17.1"
   },
