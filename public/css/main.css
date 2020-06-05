@@ -30,3 +30,12 @@ nav ul li {
 main {
   padding: 1rem;
 }
+
+.grid {
+  display: flex;
+}
+
+.grid > article {
+  margin-right: 1rem;
+  border: 1px solid black;
+}
