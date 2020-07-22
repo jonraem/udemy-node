@@ -1,0 +1,16 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{pageTitle}
+    link(rel="stylesheet", href="/css/main.css")
+  body
+    header
+      nav
+        ul
+          li
+            a(href="/", style=(path === "/" && "font-weight:bold;")) Add user
+          li
+            a(href="/users" style=(path === "/users" && "font-weight:bold;")) Users
+    main
+      block content
