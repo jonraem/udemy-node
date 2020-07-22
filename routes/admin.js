@@ -10,6 +10,7 @@ router.get("/add-product", (req, res, next) => {
   res.render("add-product", {
     pageTitle: "My shop: Add product",
     path: "/admin/add-product",
+    addProductIsActive: true,
   });
 });
 

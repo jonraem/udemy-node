@@ -13,7 +13,9 @@ router.get("/", (req, res, next) => {
   res.render("shop", {
     pageTitle: "My shop",
     products: adminHandler.products,
+    hasProducts: !!adminHandler.products.length,
     path: "/",
+    shopIsActive: true,
   });
 });
 
