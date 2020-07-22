@@ -1,0 +1,17 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <!-- EJS does not support manipulating styles directly via JavaScript. -->
+        <a href="/" class="<%= path === '/' && 'active' %>">Shop</a>
+      </li>
+      <li>
+        <a
+          href="/admin/add-product"
+          class="<%= path === '/admin/add-product' && 'active' %>"
+          >Add product</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
