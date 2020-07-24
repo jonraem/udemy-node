@@ -105,3 +105,6 @@ dist
 
 # VSCode configuration
 .vscode
+
+# Temporary data files
+data/*

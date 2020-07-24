@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet" href="/css/main.css" />
-  </head>
+  <%- include('../includes/head.ejs') %>
   <body>
-    <%- include('includes/header.ejs') %>
+    <%- include('../includes/header.ejs') %>
     <main>
       <h1>My products</h1>
       <% if (products.length > 0) { %>
@@ -19,7 +14,7 @@
           <h2><%= product.title %></h2>
         </header>
       </article>
-      <% } %> <% } else { %>
+      <% } } else { %>
       <p>No products have been added.</p>
       <% } %>
     </main>
