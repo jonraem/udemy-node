@@ -3,6 +3,20 @@
   <%- include('../includes/head.ejs') %>
   <body>
     <%- include('../includes/header.ejs') %>
-    <main></main>
+    <main>
+      <h1>My products</h1>
+      <% if (products.length > 0) { %>
+      <div class="grid">
+        <% for (product of products) { %>
+      </div>
+      <article class="product">
+        <header>
+          <h2><%= product.title %></h2>
+        </header>
+      </article>
+      <% } } else { %>
+      <p>No products have been added.</p>
+      <% } %>
+    </main>
   </body>
 </html>

@@ -10,7 +10,7 @@ const getAddProduct = (req, res, next) => {
 const postAddProduct = (req, res, next) => {
   const product = new Product(req.body.title);
   product.save();
-  res.redirect("/");
+  res.redirect("/admin/products");
 };
 
 const getProducts = (req, res, next) => {
