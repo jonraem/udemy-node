@@ -107,4 +107,4 @@ dist
 .vscode
 
 # Temporary data files
-data/*
+data/products.json
