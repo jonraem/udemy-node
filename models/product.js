@@ -1,8 +1,8 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-const rootDir = require("../utils/rootDir");
-const p = path.join(rootDir, "data", "products.json");
+const rootDir = require('../utils/rootDir');
+const p = path.join(rootDir, 'data', 'products.json');
 
 const getProductsFromFile = (cb) => {
   fs.readFile(p, (err, fileContent) => {
@@ -12,8 +12,11 @@ const getProductsFromFile = (cb) => {
 };
 
 class Product {
-  constructor(title) {
+  constructor(title, imageUrl, description, price) {
     this.title = title;
+    this.imageUrl = imageUrl;
+    this.description = description;
+    this.price = price;
   }
 
   /**
@@ -21,9 +24,10 @@ class Product {
    */
   save() {
     getProductsFromFile((products) => {
+      console.log(products);
       products.push(this);
       fs.writeFile(p, JSON.stringify(products), (err) => {
-        if (err) console.log("WRITE FILE ERROR: " + err);
+        if (err) console.log('WRITE FILE ERROR: ' + err);
       });
     });
   }

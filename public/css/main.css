@@ -43,3 +43,17 @@ main {
 .active {
   font-weight: bold;
 }
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid black;
+  width: 400px;
+}
+
+.product img {
+  width: 100%;
+}

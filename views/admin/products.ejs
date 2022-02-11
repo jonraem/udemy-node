@@ -9,13 +9,22 @@
       <div class="grid">
         <% for (product of products) { %>
       </div>
-      <article class="product">
-        <header>
-          <h2><%= product.title %></h2>
-        </header>
-      </article>
+      <% if (product.title.length > 0) { %>
+        <article class="product">
+          <header>
+            <h2><%= product.title %></h2>
+            <img src="<%= product.imageUrl %>" alt="<%= product.title %>" />
+            <h3>$<%= product.price %></h3>
+            <p><%= product.description %></p>
+          </header>
+          <a href="/admin/edit-product">Edit</a>
+          <form action="/admin/delete-product" method="POST">
+            <button type="submit">Delete</button>
+          </form>
+        </article>
+      <% } %>
       <% } } else { %>
-      <p>No products have been added.</p>
+        <p>No products have been added.</p>
       <% } %>
     </main>
   </body>
